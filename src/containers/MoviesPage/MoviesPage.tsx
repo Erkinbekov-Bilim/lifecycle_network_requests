@@ -36,9 +36,9 @@ const MoviesPage = () => {
       localStorage.setItem('movies', JSON.stringify(movies));
     }
 
-    return () => {
-      localStorage.removeItem('movies');
-    };
+    if (movies.length === 0) {
+      localStorage.removeItem("movies")
+    }
   }, [movies]);
 
   const onDeleteMovie = (id: string): void => {
