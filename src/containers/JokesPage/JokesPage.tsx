@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './JokesPage.css';
 import { API_URL } from '../../constants/api';
 import Jokes from '../../components/Jokes/Jokes';
@@ -10,7 +10,7 @@ const JokesPage = () => {
   const [joke, setJoke] = useState<IJoke>({} as IJoke);
   let isIgnore = false;
 
-  const getJoke = async (isIgnore: boolean) => {
+  const getJoke = async (isIgnore: boolean): Promise<void> => {
     try {
       const response = await fetch(API_URL);
 
