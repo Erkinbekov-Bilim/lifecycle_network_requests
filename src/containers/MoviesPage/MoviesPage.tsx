@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MoviesPage.css';
 import Movies from '../../components/Movies/Movies';
 import MovieForm from '../../components/Movies/MovieForm/MovieForm';
@@ -22,6 +22,24 @@ const MoviesPage = () => {
       )
     );
   };
+
+  useEffect(() => {
+    const savedMovies = JSON.parse(localStorage.getItem('movies') || '[]');
+
+    if (savedMovies.length > 0) {
+      setMovies(savedMovies);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (movies.length > 0) {
+      localStorage.setItem('movies', JSON.stringify(movies));
+    }
+
+    return () => {
+      localStorage.removeItem('movies');
+    };
+  }, [movies]);
 
   const onDeleteMovie = (id: string): void => {
     setMovies((prevState) => [...prevState].filter((movie) => movie.id !== id));
