@@ -1,12 +1,14 @@
-import './App.css'
+import './App.css';
+import MoviesPage from './containers/MoviesPage/MoviesPage';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
-
   return (
     <>
-      <p>App</p>
+      <ToastContainer />
+      <MoviesPage />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

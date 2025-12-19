@@ -1,0 +1,50 @@
+.form-block {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 10px;
+}
+
+.movie-input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(72, 107, 172);
+  font-size: 18px;
+}
+
+.movie-input:focus {
+  outline: none;
+  border: 1px solid rgb(72, 107, 172);
+}
+
+.submit-button {
+  width: 20%;
+  margin-left: 5%;
+  padding: 15px 20px;
+  border-radius: 16px;
+  font-size: 18px;
+  border: 1px solid;
+  font-weight: 700;
+}
+
+.error-message {
+  color: rgb(255, 255, 255);
+  background: red;
+  font-size: 14px;
+  border-radius: 32px;
+  padding: 5px 10px;
+  width: 90%;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+.movies {
+  margin-top: 30px;
+}
+
+.movies-block {
+  overflow: hidden;
+  overflow-x: hidden;
+  background: rgb(255, 226, 254);
+  border-radius: 32px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.movies-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow-y: auto;
+  height: 300px;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.movies-card-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  background: rgb(243, 136, 238);
+  border-radius: 22px;
+  padding: 5px;
+}
+
+.movies-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.movies-card::-webkit-scrollbar-track {
+  background: #cfdee2;
+}
+
+.movies-card::-webkit-scrollbar-thumb {
+  background: rgb(243, 136, 238);
+}
+
+.movies-card::-webkit-scrollbar-thumb:hover {
+  background: rgb(243, 136, 238);
+}
+
+.empty-message {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  background: rgb(195, 136, 243);
+  border-radius: 22px;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
