@@ -13,29 +13,32 @@ interface IButtonProps extends React.PropsWithChildren {
   motionAnimation?: MotionProps;
 }
 
-const Button: React.FC<IButtonProps> = ({
-  type = 'button',
-  text,
-  className,
-  style,
-  onClick,
-  children,
-  title,
-  motionAnimation,
-}) => {
-  return (
-    <motion.button
-      type={type}
-      className={className}
-      style={style}
-      onClick={onClick}
-      title={title}
-      {...motionAnimation}
-    >
-      {text}
-      {children}
-    </motion.button>
-  );
-};
+const Button: React.FC<IButtonProps> = React.memo(
+  ({
+    type = 'button',
+    text,
+    className,
+    style,
+    onClick,
+    children,
+    title,
+    motionAnimation,
+  }) => {
+    return (
+      <motion.button
+        type={type}
+        className={className}
+        style={style}
+        onClick={onClick}
+        title={title}
+        {...motionAnimation}
+      >
+        {text}
+        {children}
+      </motion.button>
+    );
+  },
+  (prevProps, nextProps) => prevProps.text === nextProps.text
+);
 
 export default Button;

@@ -7,4 +7,14 @@ interface IMovie {
   name: string;
 }
 
-export { IMovie, IMovieMutation };
+interface IJoke {
+  categories?: [];
+  created_at: string;
+  icon_url: string;
+  id: string;
+  updated_at: string;
+  url: string;
+  value: string;
+}
+
+export { IMovie, IMovieMutation, IJoke };

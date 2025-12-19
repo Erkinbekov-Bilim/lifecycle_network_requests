@@ -1,0 +1,22 @@
+.joke-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: auto;
+  background: rgb(84, 73, 187);
+  padding: 30px;
+  border-radius: 32px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.new-joke {
+  width: 350px;
+  border-radius: 32px;
+  margin: 0 auto;
+}

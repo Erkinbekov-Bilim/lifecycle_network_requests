@@ -12,3 +12,17 @@ body {
   line-height: 1.5;
   background: rgb(153, 126, 189);
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.router-button {
+  width: 300px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  margin-top: calc(20% - 50px);
+}
