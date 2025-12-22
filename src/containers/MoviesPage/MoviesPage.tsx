@@ -24,7 +24,7 @@ const MoviesPage = () => {
   };
 
   useEffect(() => {
-    const savedMovies = JSON.parse(localStorage.getItem('movies') || '[]');
+    const savedMovies: IMovie[] = JSON.parse(localStorage.getItem('movies') || '[]');
 
     if (savedMovies.length > 0) {
       setMovies(savedMovies);
